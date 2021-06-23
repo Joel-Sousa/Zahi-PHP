@@ -1,0 +1,15 @@
+CREATE DATABASE zahi;
+
+USE zahi;
+
+CREATE TABLE cliente(
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50)
+);
+
+CREATE TABLE telefone(
+cliente_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ddd VARCHAR(3),
+telefone VARCHAR(10),
+FOREIGN KEY (cliente_id) REFERENCES cliente(id)
+);
